@@ -8,6 +8,7 @@ services:
     build: . 
     # ports:
     #   - "3000:3000"
+    image: 2kshine/workout-planner
     environment:
       - PORT=3000
     depends_on:
