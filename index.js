@@ -58,8 +58,9 @@ app.use("/api/v1/workoutVideos/", workoutVideoRoutes);
 app.use("/api/v1/users/", userRouter);
 
 //connecting to the database and starting server
+const MONGOURL = `mongodb+srv://${process.env.MONGO_USER || MONGO_USER}:${process.env.MONGO_PASSWORD || MONGO_PASSWORD}@workoutvideos.al9mtwj.mongodb.net/?retryWrites=true&w=majority`
 mongoose
-  .connect(process.env.MONGO_URI || MONGO_URI, {
+  .connect(MONGOURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
