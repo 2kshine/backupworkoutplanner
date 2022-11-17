@@ -50,7 +50,7 @@ app.use(express.json());
 
 //Routes
 app.get("/api/v1", (req, res)=>{
-    res.send("Jeee")
+    res.send("Hello there new architecture worked")
     console.log("yeah it ran");
 });
     
